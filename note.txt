@@ -8,8 +8,11 @@ Các thành phần thường gặp trong website
     + Footer         Chân trang
 
 Phân tích dự án Website The Band -> OK
-    + Header
+    + Header -> OK
     + Slider
+        + Ảnh Relaxtive
+            Luôn phải hiển thị tỷ lệ gốc của bức ảnh
+        + Chữ đè lên > Absolute
     + Content
         + About
         + Tour
