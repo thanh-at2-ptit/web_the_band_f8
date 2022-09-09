@@ -20,6 +20,11 @@ html {
     Màu sắc
     Kiểu dáng, kiểu chữ
 */
+
+.clear {
+    clear: both;
+}
+
 #main {
     position: relative;
 }
@@ -182,7 +187,109 @@ html {
 }
 
 #content {
-    min-height: 2200px;
+
+}
+
+#content .content-section{
+    width: 800px;
+    /* Đẩy sang trái và phải 1 khoảng auto => Căn giữa */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0;
+    /* không nên sử dụng - làm 1 thẻ div đặt clear both vào */
+    /* clear: both; */
+}
+
+#content .section-heading {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    /* khoảng cách giữa các ký tự */
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+#content .section-subheading {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 25px;
+    font-style: italic;
+    /* độ mờ */
+    opacity: 0.6;
+}
+
+#content .about-text {
+    font-size: 15px;
+    margin-top: 25px;
+    /* căn đều 2 bên */
+    text-align: justify;
+    /* Tiếng Anh 1.4 - Tiếng Việt 1.6 */
+    line-height: 1.4;
+}
+
+#content .about-team {
+    margin-top: 47px;
+}
+
+#content .about-team-member {
+    float: left;
+    width: calc(100%/3);
+    /* Căn được cả ảnh và text */
+    text-align: center;    
+
+}
+
+#content .member-name {
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+#content .member-img {
+    width: 60%;
+    /* margin-left: 20%;
+    margin-right: 20%; */
+}
+
+#content .tour-dates {
+    width: 100%;
+    color: white;
+    background-color: black;
+}
+
+#content ul.tour-months {
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    margin-top: 40px;
+    list-style: none;
+}
+
+#content li.tour-month{
+    margin: 0 17px;
+    /* line-height: 40px; dùng line height ko ra được border */
+    padding: 11px 16px;
+    font-size: 15px;
+    border-bottom: 1px solid #333;
+    color: black;
+    background-color: white;
+}
+
+.tour-month .sold-out {
+    background-color: red;
+    color: white;
+    padding: 4px 3px;
+    margin-left: 16px;
+}
+
+.tour-month .quantity {
+    float: right;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    /* chỉ sử dụng khi có float */
+    margin-top: -2px;
 }
 
 #Footer {
