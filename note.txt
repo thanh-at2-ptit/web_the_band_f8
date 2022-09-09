@@ -1,0 +1,19 @@
+Các thành phần thường gặp trong website
+    + Header
+    + Navigation
+    + Breadcrumb     Cho biết vị trí của mình trên trang
+    + Slidebar       Nằm 1 bên của màn hình
+    + Slider         Trình bày nội dung
+    + Content        Nội dung chính
+    + Footer         Chân trang
+
+Phân tích dự án Website The Band -> OK
+    + Header
+    + Slider
+    + Content
+        + About
+        + Tour
+        + Contact
+        + Image
+        + Footer
+    + Footer

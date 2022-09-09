@@ -1,0 +1,147 @@
+/* Reset CSS */
+*{
+    /* Emmet - viết tất 
+    p tab
+    m tab
+    box tab
+    */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+}
+/* 
+    Với mỗi element 
+    Vị trí
+    Kích thước
+    Màu sắc
+    Kiểu dáng, kiểu chữ
+*/
+#main {
+    position: relative;
+}
+
+#header {
+    /* Fix cứng header trên đầu trang */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* ----------------------------------------- */
+    height: 46px;
+    background-color: black;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav,
+.subnav {
+    /* Bỏ định dạng của list */
+    list-style: none;
+}
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav > li > a {
+    color: white;
+    text-transform: uppercase;
+}
+
+#nav li a {
+    text-decoration: none;
+    display: inline-block;
+    line-height: 46px;
+    padding: 0px 24px;
+}
+/* Không hover vào a vì nếu có sub menu nếu đặt vào a
+   + Khi hover vào sub menu màu của menu đc select sẽ mất => để vào li
+*/
+
+/* Selector gộp */
+#nav .subnav li:hover a,
+#nav > li:hover > a{
+    color: black;
+    background-color: #ccc;
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav .subnav {
+    position: absolute;
+    /* Lấy chiều cao của thẻ cha chứa nó */
+    top: 100%;
+    display: none;
+    background-color: white;
+    min-width: 160px;
+    /* 
+    h-offset        Theo chiều ngang - required
+    v-offset        Theo chiều dọc  - required
+    blur            Độ mờ
+    spread          Độ tỏa
+    color           Màu của bóng đổ
+    => ví dụ bên dưới đặt sãn màu rgba với độ mờ nên k cần blur
+    */
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#nav .more-menu-icon{
+    font-size: 20px;
+}
+
+.subnav li {
+    display: block;
+}
+
+#nav .subnav a {
+    display: block;
+    color: black;
+    padding: 0px 12px;
+    line-height: 38px;
+}
+
+#header .search-btn {
+    width: 70px;
+    float: right;
+}
+
+#header .search-btn:hover {
+    /* Chuyển pointer */
+    cursor: pointer;
+    background-color: red;
+}
+
+#header .search-icon {
+    color: white;
+    line-height: 46px;
+    font-size: 24px;
+    padding: 0 23px;
+}
+
+
+#slider {
+    /* Đẩy slider xuống dưới để không ăn vào phần của header */
+    margin-top: 46px;
+    min-height: 2000px;
+    background-color: #ccc;
+}
+
+#content {
+
+}
+
+#Footer {
+
+}
