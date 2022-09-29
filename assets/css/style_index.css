@@ -292,6 +292,53 @@ html {
     margin-top: -2px;
 }
 
+.tour-locations{
+    /* background-color: white; */
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.place-item {
+    /* background-color: white; */
+    float: left;
+    width: calc(100%/3);
+    padding: 0px 16px;
+}
+
+.place-item img {
+    width: 100%;
+} 
+
+.place-info {
+    background-color: white;
+    color: black;
+    width: 100%;
+    padding: 17px 16px;
+    font-size: 15px;
+}
+
+.place-info .place-time {
+    margin: 16px 0px;
+    color: #ccc;
+}
+
+.place-info .place-decs {
+    margin: 16px 0px;
+}
+
+.place-info .btn-buy-ticket {
+    /* margin: 16px 0px; */
+    display: inline-block;
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+}
+
+.place-info .btn-buy-ticket:hover {
+    background-color: #ccc;
+    color: #000;
+}
 #Footer {
 
 }
