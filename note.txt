@@ -19,3 +19,7 @@ Phân tích dự án Website The Band -> OK
         + Contact
         + Image
     + Footer
+
+#92
+Khi click vào nút Buy Ticket => Show ra Popup => Gọi chung là Modal
+Khi Modal này hiện lên => Làm mờ lớp nền bên dưới => Overlay => Sử dụng Positon = Fixed

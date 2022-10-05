@@ -93,7 +93,7 @@
                                 <h3 class="place-name">NewYork</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-decs">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="" class="btn-buy-ticket">Buy Ticket</a>
+                                <button class="btn-buy-ticket js-buy-ticket-click">Buy Ticket</button>
                             </div>
                         </div>
         
@@ -103,7 +103,7 @@
                                 <h3 class="place-name">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-decs">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="" class="btn-buy-ticket">Buy Ticket</a>
+                                <button class="btn-buy-ticket js-buy-ticket-click">Buy Ticket</button>
                             </div>
                         </div>
         
@@ -113,7 +113,7 @@
                                 <h3 class="place-name">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-decs">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="" class="btn-buy-ticket">Buy Ticket</a>
+                                <button class="btn-buy-ticket js-buy-ticket-click">Buy Ticket</button>
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -133,6 +133,73 @@
         <div id="footer">
 
         </div>
+
+        <div class="modal js-modal">
+            <!-- Chứa các lớp hiển thị trên nền WEB VD: Popup -->
+            <div class="modal-container js-modal-container">
+                <div class="modal-close js-modal-close">
+                    <i class="ti-close"></i>
+                </div>
+                <div class="modal-header">
+                    <i class="ti-bag"></i>
+                    Tickets
+                </div>
+                <div class="modal-body">
+                    <label for="" class="modal-label">
+                        <i class="ti-shopping-cart"></i>
+                        Tickets, $15 per person
+                    </label>
+                    <input type="text" class="modal-input" placeholder="How many?">
+                
+                    <label for="" class="modal-label">
+                        <i class="ti-user"></i>
+                        Send To
+                    </label>
+                    <input type="text" class="modal-input" placeholder="Enter email">
+
+                    <button class="buy-ticket">
+                        Pay <i class="ti-check"></i>
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <button class="modal-close-btn js-modal-close-btn">
+                        Close <i class="ti-close"></i>
+                    </button>
+                    <p class="modal-help-link">
+                        Need <a href="#">help?</a>
+                    </p>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
     </div>
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket-click')
+        const modal = document.querySelector('.js-modal')
+        const modal_container = document.querySelector('.js-modal-container')
+        const close_icon = document.querySelector('.js-modal-close')
+        const close_btn = document.querySelector('.js-modal-close-btn')
+
+        // Đã có css khi element gồm 2 class là modal và open thì đặt display=flex
+        function showModal(){
+            modal.classList.add('open')
+        }
+        // Đặt về mặc định của modal thì display=none
+        function closeModal(){
+            modal.classList.remove('open')
+        }
+
+        for (var buyBtn of buyBtns){
+            buyBtn.addEventListener('click', showModal)
+        }
+
+        close_icon.addEventListener('click', closeModal)
+        close_btn.addEventListener('click', closeModal)
+        modal.addEventListener('click', closeModal)
+        modal_container.addEventListener('click', function(event){
+            // Ngăn element cha lắng nghe đến các sự kiện bên trong element con
+            event.stopPropagation()
+        })
+    </script>
 </body>
 </html>

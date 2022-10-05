@@ -339,6 +339,115 @@ html {
     background-color: #ccc;
     color: #000;
 }
+
+/* .place-info .btn-buy-ticket:active .modal-footer{
+    visibility: visible;
+} */
+
 #Footer {
 
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Tạo lớp Overlay */
+    background-color: rgba(0,0,0,0.4);
+    /*  ---------------- */
+    /* Để căn con ra giữa */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    /*  ---------------- */
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal .modal-container {
+    background-color: #fff;
+    width: 900px;
+    min-height: 200px;
+    max-width:  calc(100% - 32px);
+    animation: modalFadeIN ease 0.3s;
+}
+
+.modal-close {
+    display: flex;
+    justify-content: right;
+    background-color: #009688;
+    color: #fff;
+    font-weight: bold;
+}
+
+.modal .ti-bag {
+    padding-right: 10px;
+}
+
+.modal-header {
+    background-color: #009688;
+    height: 129px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.modal-body {
+    margin: 0px 10px;
+}
+
+.modal-body .modal-label {
+    /* width: 100%; */
+    padding: 10px 0px;
+    line-height: 40px;
+}
+
+.modal-body .modal-input {
+    width: 100%;
+    line-height: 23px;
+    font-size: 15px;
+    border-width: 2px;
+    padding: 8px;
+}
+
+.modal-body .buy-ticket{
+    width: 100%;
+    background-color: #009688;
+    color: #fff;
+    font-size: 15px;
+    line-height: 23px;
+    padding: 16px;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+.modal-footer {
+    margin: 20px 10px;
+}
+
+.modal-footer .modal-close-btn {
+    background-color: red;
+    line-height: 23px;
+    padding: 8px 16px;
+    float: left;
+}
+
+.modal-footer .modal-help-link {
+    float: right;
+}
+
+/* Tạo chuyển động và gắn vào thuộc tính animation xem line 376*/
+@keyframes modalFadeIN {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0px);
+    }
 }
