@@ -21,6 +21,24 @@ html {
     Kiểu dáng, kiểu chữ
 */
 
+/* Basic dev layout */
+
+.item-same-row {
+    float: left;
+}
+
+.col {
+    width: 100%;
+}
+
+.col-2 {
+    width: 50%;
+}
+
+.col-3 {
+    width: 33.333%;
+}
+
 .clear {
     clear: both;
 }
@@ -340,12 +358,75 @@ html {
     color: #000;
 }
 
+.contact-info {
+    margin-top: 20px;
+}
+
+.location-info p {
+    padding: 5px 0px;
+}
+
 /* .place-info .btn-buy-ticket:active .modal-footer{
     visibility: visible;
 } */
 
-#Footer {
 
+.visitor-info input {
+    padding: 10px 8px;
+
+}
+
+input.col-2.item-same-row {
+    width: 48%;
+}
+
+input.vis-email {
+    float: right;
+}
+
+.vis-mess {
+    margin-top: 10px;
+}
+
+.visitor-info input.send-info {
+    background-color: black;
+    color: white;
+    padding: 10px 0px;
+    width: 15%;
+    margin-top: 10px;
+    float: right;
+}
+
+.visitor-info input.send-info:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+.map-section {
+    margin-top: 50px;
+}
+
+.map-section img{
+    width: 100%;
+}
+
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+#footer .social-list a {
+    color: rgba(0,0,0,0.6);
+    text-decoration: none;
+}
+
+#footer p {
+    margin-top: 20px;
+    color: rgba(0,0,0,0.6);
+    text-decoration: none;
 }
 
 .modal {
